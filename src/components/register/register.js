@@ -51,7 +51,7 @@ class Register extends React.Component {
 
   render() {
     if (this.state.redirect) {
-      return <Redirect to = "/login" />
+      return <Redirect to = "/api/login" />
     }
   return (
     <div>
@@ -85,7 +85,7 @@ class Register extends React.Component {
         </form>
         <div className="redirect">
           Already have an account? &nbsp; 
-          <a href="/login">
+          <a href="/api/login">
             Log In
           </a>
         </div>

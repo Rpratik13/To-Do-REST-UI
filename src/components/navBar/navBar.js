@@ -26,7 +26,7 @@ class NavBar extends React.Component {
 
   render = () => {
     if (this.state.redirect) {
-      return (<Redirect to = "/login" />)
+      return (<Redirect to = "/api/login" />)
     }
     return (<div className  = "nav-bar">
               <div className="user-functions">
