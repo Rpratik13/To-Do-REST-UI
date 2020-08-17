@@ -32,7 +32,6 @@ class App extends React.Component {
   render (){ 
   return (
     <Router>
-      <div> Hello </div>
       <Route path="/register" component={() => <Register cookies={this.props.cookies} />} />
       <Route path="/login" component={() => <LogIn cookies={this.props.cookies}/>} />
       <Route exact path="/" render ={(props) => 
