@@ -32,9 +32,10 @@ class App extends React.Component {
   render (){ 
   return (
     <Router>
-      <Route path="/api/register" component={() => <Register cookies={this.props.cookies} />} />
-      <Route path="/api/login" component={() => <LogIn cookies={this.props.cookies}/>} />
-      <Route path="/api/todo" render ={(props) => 
+      <div> Hello </div>
+      <Route path="/register" component={() => <Register cookies={this.props.cookies} />} />
+      <Route path="/login" component={() => <LogIn cookies={this.props.cookies}/>} />
+      <Route path="/todo" render ={(props) => 
         <div>
           <NavBar navSelected = {this.setNavSelected} cookies={this.props.cookies}/>
           <Search searchQuery = {this.setSearchQuery} />
@@ -45,7 +46,7 @@ class App extends React.Component {
           />
         </div>}
       />
-      <Route exact path="/" component={() => <Redirect to ="/api/register" />} />
+      <Route exact path="/" component={() => <Redirect to ="/register" />} />
     </Router>
   );
   }
