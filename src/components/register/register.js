@@ -19,7 +19,7 @@ class Register extends React.Component {
   
   async handleSubmit(event) {
     event.preventDefault();
-    await fetch('http://localhost:5000/api/register/', {
+    await fetch('https://to-do-rest-api.herokuapp.com/api/register/', {
       method: 'POST',
       headers: {
           'content-type': 'application/json'

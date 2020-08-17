@@ -13,7 +13,7 @@ class ToDoItem extends React.Component {
   }
 
   deleteToDo() {
-    fetch('/api/todo/delete?id=' + this.state.keyIndex, {
+    fetch('https://to-do-rest-api.herokuapp.com/api/todo/delete?id=' + this.state.keyIndex, {
       headers : {
         'authorization' : this.cookies.cookies.token,
         'content-type' : 'application/json'
@@ -25,7 +25,7 @@ class ToDoItem extends React.Component {
   }
   
   completeToDo() {
-    fetch('/api/todo/complete?id=' + this.state.keyIndex, {
+    fetch('https://to-do-rest-api.herokuapp.com/api/todo/complete?id=' + this.state.keyIndex, {
       headers : {
         'authorization' : this.cookies.cookies.token,
         'content-type' : 'application/json'

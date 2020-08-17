@@ -14,7 +14,7 @@ class AddTask extends React.Component {
   
   handleSubmit(event) {
     event.preventDefault();
-    fetch('http://localhost:5000/api/todo/add', {
+    fetch('https://to-do-rest-api.herokuapp.com/api/todo/add', {
       method: 'POST',
       headers: {
         'authorization': this.cookies.cookies.token,

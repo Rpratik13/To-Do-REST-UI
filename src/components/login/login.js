@@ -18,7 +18,7 @@ class LogIn extends React.Component {
 
   async handleSubmit(event) {
     event.preventDefault();
-     await fetch('http://localhost:5000/api/login', {
+     await fetch('https://to-do-rest-api.herokuapp.com/api/login', {
       method  : 'POST',
       headers : {
           'content-type': 'application/json'

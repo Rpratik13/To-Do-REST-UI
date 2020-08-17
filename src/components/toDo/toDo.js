@@ -16,7 +16,7 @@ class ToDo extends React.Component {
   }
   
   fetchData() {
-    fetch('/api/todo', {
+    fetch('https://to-do-rest-api.herokuapp.com/api/todo', {
       headers: {
         'authorization': this.cookies.cookies.token,
         'username' : this.cookies.cookies.username
