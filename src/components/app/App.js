@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Register from './components/register/register.js';
-import LogIn from './components/login/login.js';
-import ToDo from './components/toDo/toDo.js';
-import NavBar from './components/navBar/navBar';
-import Search from './components/search/search';
+import Register from '../register/register.js';
+import LogIn from '../login/login.js';
+import ToDo from '../toDo/toDo.js';
+import NavBar from '../navBar/navBar';
+import Search from '../search/search';
 import { withCookies } from 'react-cookie';
 
-import { Route, BrowserRouter as Router } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Redirect } from 'react-router-dom';
 class App extends React.Component {
   constructor (props) {
     super();
@@ -45,6 +45,7 @@ class App extends React.Component {
           />
         </div>}
       />
+      <Route exact path="/" component={() => <Redirect to ="/api/register" />} />
     </Router>
   );
   }
