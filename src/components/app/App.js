@@ -32,6 +32,7 @@ class App extends React.Component {
   render (){ 
   return (
     <Router>
+      <Route exact path="/" component={() => <Redirect to ="api/register" />} />
       <Route path="/api/register" component={() => <Register cookies={this.props.cookies} />} />
       <Route path="/api/login" component={() => <LogIn cookies={this.props.cookies}/>} />
       <Route path="/api/todo" render ={(props) => 
@@ -45,7 +46,6 @@ class App extends React.Component {
           />
         </div>}
       />
-      <Route exact path="/" component={() => <Redirect to ="/api/register" />} />
     </Router>
   );
   }
