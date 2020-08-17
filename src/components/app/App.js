@@ -35,7 +35,7 @@ class App extends React.Component {
       <div> Hello </div>
       <Route path="/register" component={() => <Register cookies={this.props.cookies} />} />
       <Route path="/login" component={() => <LogIn cookies={this.props.cookies}/>} />
-      <Route path="/todo" render ={(props) => 
+      <Route exact path="/" render ={(props) => 
         <div>
           <NavBar navSelected = {this.setNavSelected} cookies={this.props.cookies}/>
           <Search searchQuery = {this.setSearchQuery} />
@@ -46,7 +46,6 @@ class App extends React.Component {
           />
         </div>}
       />
-      <Route exact path="/" component={() => <Redirect to ="/register" />} />
     </Router>
   );
   }
